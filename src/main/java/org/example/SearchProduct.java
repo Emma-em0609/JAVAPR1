@@ -1,0 +1,50 @@
+package org.example;
+
+
+import lombok.AllArgsConstructor;
+import java.util.ArrayList;
+import java.util.List;
+
+@AllArgsConstructor
+public class SearchProduct {
+    private List<Product> products;
+
+    public List<Product> searchByName(String name) {
+        List<Product> result = new ArrayList<>();
+        String searchTerm = name.toLowerCase().trim();
+
+        for (Product product : products) {
+            if (product.getName().toLowerCase().contains(searchTerm)) {
+                result.add(product);
+            }
+        }
+
+        return result;
+    }
+
+    public List<Product> searchByCategory(String categoryName) {
+        List<Product> result = new ArrayList<>();
+        String searchTerm = categoryName.toLowerCase().trim();
+
+        for (Product product : products) {
+            if (product.getCategory().getName().toLowerCase().contains(searchTerm)) {
+                result.add(product);
+            }
+        }
+
+        return result;
+    }
+
+    public List<Product> search(String searchTerm) {
+        List<Product> result = new ArrayList<>();
+        String term = searchTerm.toLowerCase().trim();
+
+        for (Product product : products) {
+            if (product.getName().toLowerCase().contains(term) || product.getCategory().getName().toLowerCase().contains(term)) {
+                result.add(product);
+            }
+        }
+
+        return result;
+    }
+}
