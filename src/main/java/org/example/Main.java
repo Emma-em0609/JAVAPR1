@@ -10,13 +10,13 @@ public class Main {
 
         System.out.println("Ласкаво просимо до нашого магазину OfficeSupplies!");
 
-        Category electronics = new Category(1, "Письмове приладдя");
-        Category smartphones = new Category(2, "Папір та зошити");
-        Category accessories = new Category(3, "Офісне приладдя");
+        Category officeSupplies1 = new Category(1, "Письмове приладдя");
+        Category officeSupplies2 = new Category(2, "Папір та зошити");
+        Category officeSupplies3 = new Category(3, "Офісне приладдя");
 
-        Product product1 = new Product(1, "Ручка Parker Jotter", 150.0, "Елегантна кулькова ручка для щоденного використання.", electronics);
-        Product product2 = new Product(2, "Зошит А5, 96 аркушів", 50.0, "Зошит у лінійку з міцною обкладинкою.", accessories);
-        Product product3 = new Product(3, "Скоби для степлера №24/6", 20.0, "Надійні скоби для більшості стандартних степлерів.", smartphones);
+        Product product1 = new Product(1, "Ручка Parker Jotter", 150.0, "Елегантна кулькова ручка для щоденного використання.", officeSupplies1);
+        Product product2 = new Product(2, "Зошит А5, 96 аркушів", 50.0, "Зошит у лінійку з міцною обкладинкою.", officeSupplies2);
+        Product product3 = new Product(3, "Скоби для степлера №24/6", 20.0, "Надійні скоби для більшості стандартних степлерів.", officeSupplies3);
 
         List<Product> allProducts = new ArrayList<>();
         allProducts.add(product1);
